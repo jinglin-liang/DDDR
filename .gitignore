@@ -1,6 +1,6 @@
 /.vscode/
 /data
-/output
+/outputs
 /models
 __pycacha__/
 */__pycache__/

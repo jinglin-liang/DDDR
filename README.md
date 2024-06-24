@@ -30,7 +30,13 @@ CUDA_VISIBLE_DEVICES=0 python main.py --dataset cifar100 --method target --tasks
 
 DDDR
 ```bash
-TOKENIZERS_PARALLELISM=false CUDA_VISIBLE_DEVICES=0 python main.py --dataset cifar100 --method ours --tasks 5 --beta 0.5 --seed 2024
+CUDA_VISIBLE_DEVICES=0 python main.py --dataset cifar100 --method ours --tasks 5 --beta 0.5 --seed 2024
 ```
+
+reproduction
+```bash
+bash rep_run.sh
+```
+
 
 

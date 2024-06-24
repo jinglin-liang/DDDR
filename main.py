@@ -1,6 +1,7 @@
 import os
 import argparse
 import time
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 from utils import DataManager, setup_seed, count_parameters
 from methods import get_learner
@@ -10,7 +11,7 @@ def args_parser():
     parser = argparse.ArgumentParser(description='benchmark for federated continual learning')
     # General settings
     parser.add_argument('--exp_name', type=str, default='', help='name of this experiment')
-    parser.add_argument('--save_dir', type=str, default="", help='save the syn data')
+    parser.add_argument('--save_dir', type=str, default="outputs", help='save data')
     parser.add_argument('--seed', type=int, default=2024, help='random seed')
     parser.add_argument('--g_sigma', type=float, default=0, help='sigma of updata g dp')
     parser.add_argument('--classifer_dp', type=float, default=0, help='dp add to classifer')
@@ -76,6 +77,6 @@ if __name__ == '__main__':
     if args.exp_name == "":
         args.exp_name = time.strftime("%Y%m%d_%H%M%S", time.localtime())
     args.exp_name = f"beta_{args.beta}_tasks_{args.tasks}_seed_{args.seed}_sigma_{args.g_sigma}_{args.exp_name}"
-    args.save_dir = os.path.join("output", args.method, args.dataset, args.exp_name)
+    args.save_dir = os.path.join(args.save_dir, args.method, args.dataset, args.exp_name)
     args = vars(args)
     train(args)
