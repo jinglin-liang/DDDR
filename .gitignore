@@ -1,8 +1,10 @@
 /.vscode/
-/data
+/data/*
 /outputs
 /models
 __pycacha__/
 */__pycache__/
 */*/__pycache__/
 */*/*/__pycache__/
+
+!/data/preprocess.py
