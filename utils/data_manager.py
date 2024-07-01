@@ -5,7 +5,6 @@ from torchvision import transforms
 from utils.data import iCIFAR10, iCIFAR100, iImageNet100, iImageNet1000, TinyImageNet200
 import torch, copy
 import random
-import numpy as np
 import torch.backends.cudnn as cudnn
 
 

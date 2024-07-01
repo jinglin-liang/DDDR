@@ -1,6 +1,12 @@
+environment
+```bash
+mkvirtualenv dddr
+pip install -r requirement.txt
+```
+
 prepare data
 ```bash
-mkdir data & cd data
+cd data
 wget http://cs231n.stanford.edu/tiny-imagenet-200.zip
 unzip tiny-imagenet-200.zip
 python preprocess.py
@@ -12,6 +18,8 @@ download pretrained diffusion model
 mkdir -p models/ldm/text2img-large
 wget -O models/ldm/text2img-large/model.ckpt https://ommer-lab.com/files/latent-diffusion/nitro/txt2img-f8-large/model.ckpt
 ```
+
+Please download bert-base-uncased from huggingface, and put it in models/bert
 
 Finetune
 ```bash

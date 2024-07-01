@@ -43,7 +43,7 @@ do
     else
         WKD=10
     fi
-    for SEED in '2024';
+    for SEED in '2023' '2024' '2025';
     do
         for DATASET in 'cifar100' 'tiny_imagenet';
         do
