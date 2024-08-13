@@ -9,15 +9,15 @@
 </p> 
 
 > **Diffusion-Driven Data Replay: A Novel Approach to Combat Forgetting in Federated Class Continual Learning**<br>
-> Jinglin Liang<sup>1</sup>, Jin Zhong<sup>1</sup>, Hanlin Gu<sup>2</sup>, Zhongqi Lu<sup>3</sup>, Xingxing Tang<sup>2</sup>, Gang Dai<sup>2</sup>, Shuangping Huang<sup>1</sup>, Lixin Fan<sup>4</sup>, Qiang Yang<sup>2</sup> <br>
-> <sup>1</sup>South China University of Technology (SCUT), <sup>2</sup>HKUST, <sup>3</sup>UPC, <sup>4</sup>WeBank
+> Jinglin Liang<sup>1</sup>, Jin Zhong<sup>1</sup>, Hanlin Gu<sup>2</sup>, Zhongqi Lu<sup>3</sup>, Xingxing Tang<sup>2</sup>, Gang Dai<sup>1</sup>, Shuangping Huang<sup>1,5*</sup>, Lixin Fan<sup>4</sup>, Qiang Yang<sup>2,4</sup> <br>
+> <sup>1</sup>South China University of Technology, <sup>2</sup>The Hong Kong University of Science and Technology, <sup>3</sup>China University of Petroleum, <sup>4</sup>WeBank, <sup>5</sup>Pazhou Laboratory
 
 >**Abstract**: <br>
 > Federated Class Continual Learning (FCCL) merges the challenges of distributed client learning with the need for seamless adaptation to new classes without forgetting old ones. The key challenge in FCCL is catastrophic forgetting, an issue that has been explored to some extent in Continual Learning (CL). However, due to privacy preservation requirements, some conventional methods, such as experience replay, are not directly applicable to FCCL. Existing FCCL methods mitigate forgetting by generating historical data through federated training of GANs or data-free knowledge distillation. However, these approaches often suffer from unstable training of generators or low-quality generated data, limiting their guidance for the model. To address this challenge, we propose a novel method of data replay based on diffusion models. Instead of training a diffusion model, we employ a pre-trained conditional diffusion model to reverse-engineer each category, searching the corresponding input conditions for each category within the model's input space, significantly reducing computational resources and time consumption while ensuring effective generation. Furthermore, we enhance the classifier's domain generalization ability on generated and real data through contrastive learning, indirectly improving the representational capability of generated data for real data. Extensive experiments demonstrate that our method significantly outperforms existing baselines.
 
-<div style="display: flex; flex-direction: column; align-items: center; text-align: center; ">
+<p align="center">
 <img src="imgs/fig-overview.png" style="width: 80%;">
-</div>
+</p>
 <p align="center" style="margin-bottom: 10px;">
 Overview of our DDDR
 </p>
@@ -25,7 +25,7 @@ Overview of our DDDR
 ## 📢 Description
 This repository is the official PyTorch implementation of:
 
-[Diffusion-Driven Data Replay: A Novel Approach to Combat Forgetting in Federated Class Continual Learning]() (ECCV 2024).
+[Diffusion-Driven Data Replay: A Novel Approach to Combat Forgetting in Federated Class Continual Learning]() (ECCV 2024 Oral).
 
 ## 🔨 Requirement
 ### Environment
