@@ -2,9 +2,11 @@
 
  <p align='center'>
   <b>
-    <a href="">Paper</a>
+    <a href="https://arxiv.org/abs/2409.01128">Paper</a>
     |
-    <a href="">Poster</a>
+    <a href="https://eccv.ecva.net/media/PosterPDFs/ECCV%202024/1969.png?t=1725949844.2686071">Poster</a>
+    |
+    <a href="https://eccv.ecva.net/virtual/2024/poster/1969">Video</a>
   </b>
 </p> 
 
